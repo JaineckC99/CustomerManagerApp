@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+javafx {
+    version = '21.0.12'
+    modules = ['javafx.controls']
+}
+
+application {
+    // Notice we removed mainModule entirely!
+    mainClass = 'com.example.customermanager.CustomerManagerApp'
+}
